@@ -28,7 +28,7 @@ from src.insert.disciplinas_insert import insert_disciplinas #
 from src.insert.professores_insert import insert_professores #
 #------------------------------------------------------------#
 
-conn = sqlite3.connect("gpsi.db")
+conn = sqlite3.connect("C:\\Users\\Jorge Silva\\OneDrive\\Documentos\\epbjc\\sqlite-database\\gpsi.db")
 
 escolha_da_tabela = int(input('''\nQual é a tabela que queres usar?
                        \n1-Alunos
