@@ -7,6 +7,6 @@ def insert_disciplinas():
 
     disciplina1 = input("\nQual a disciplina que desejas inserir na tabela?")
     
-    cur.execute(f'INSERT INTO disciplinas (disciplina) VALUES ({disciplina1})')
+    cur.execute(f'INSERT INTO disciplinas (disciplina) VALUES ("{disciplina1}")')
     
     conn.commit()

@@ -39,15 +39,14 @@ escolha_da_tabela = int(input('''\nQual é a tabela que queres usar?
 nome_da_tabela = ""
 match (escolha_da_tabela):
         case 1:
-            opcaocrd = int(input('''\nO que queres fazer nesta tabela?
-                       \n1-Criar tabela alunos
-                       \n2-Inserir dados na tabela
-                       \n3-Ler tabela
-                       \n4-Apagar dados da tabela
-                       \n5-Apagar tabela
-                       \n6-Voltar 
+            opcaocrd = int(input('''\nO que queres fazer nesta tabela?\n
+                         1-Criar tabela alunos
+                         2-Inserir dados na tabela
+                         3-Ler tabela
+                         4-Apagar dados da tabela
+                         5-Apagar tabela
+                         6-Voltar 
                        '''))
-            
             match(opcaocrd):
                     case 1:
                         create_alunos()
@@ -60,18 +59,18 @@ match (escolha_da_tabela):
                     case 5:
                         drop_alunos()
                     case 6:
-                        conn.close()
+                        ""
                     case _:
                         print("Escolha inválida")
                  
         case 2:
-            opcaocrd = int(input('''\nO que queres fazer nesta tabela?
-                       \n1-Criar tabela disciplinas
-                       \n2-Inserir dados na tabela
-                       \n3-Ler tabela
-                       \n4-Apagar dados da tabela
-                       \n5-Apagar tabela
-                       \n6-Voltar  
+            opcaocrd = int(input('''\nO que queres fazer nesta tabela?\n
+                         1-Criar tabela disciplinas
+                         2-Inserir dados na tabela
+                         3-Ler tabela
+                         4-Apagar dados da tabela
+                         5-Apagar tabela
+                         6-Voltar  
                        '''))
             
             match(opcaocrd):
@@ -86,17 +85,17 @@ match (escolha_da_tabela):
                     case 5:
                         drop_disciplinas()
                     case 6:
-                      conn.close()
+                        ""
                     case _:
                         print("Escolha inválida")
         case 3:
-            opcaocrd = int(input('''\nO que queres fazer nesta tabela?
-                       \n1-Criar tabela professores
-                       \n2-Inserir dados na tabela
-                       \n3-Ler tabela
-                       \n4-Apagar dados da tabela
-                       \n5-Apagar tabela
-                       \n6-Voltar 
+            opcaocrd = int(input('''\nO que queres fazer nesta tabela?\n
+                         1-Criar tabela professores
+                         2-Inserir dados na tabela
+                         3-Ler tabela
+                         4-Apagar dados da tabela
+                         5-Apagar tabela
+                         6-Voltar 
                        '''))
             
             match(opcaocrd):
@@ -111,7 +110,7 @@ match (escolha_da_tabela):
                     case 5:
                         drop_professores()
                     case 6:
-                      conn.close()
+                        ""
                     case _:
                         print("Escolha inválida")
         case _:

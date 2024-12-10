@@ -7,6 +7,6 @@ def insert_professores():
 
     nome_professor1 = input("\nQual o nome do professor que desejas inserir na tabela?")
     
-    cur.execute(f'INSERT INTO professores (nome_professor) VALUES ({nome_professor1})')
+    cur.execute(f'INSERT INTO professores (nome_professor) VALUES ("{nome_professor1}")')
     
     conn.commit()
