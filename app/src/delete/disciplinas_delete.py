@@ -27,7 +27,6 @@ def delete_disciplinas():
             else:
                 print("\nEscolha inválida")
                 
-            conn.commit()
 
         case 2:
 
@@ -47,8 +46,9 @@ def delete_disciplinas():
             else:
                 print("\nEscolha inválida")
 
-            conn.commit()
         case 3:
-            conn.close()
+            ""
         case _:
             print("Escolha inválida")
+
+conn.commit()

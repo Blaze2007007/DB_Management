@@ -9,7 +9,8 @@ def read_alunos():
                        \n1-Todos os dados
                        \n2-Pesquisar alunos por nome
                        \n3-Pesquisar alunos por nome e idade
-                       \n4-Sair
+                       \n4-Perquisar alunos por id
+                       \n5-Sair
                        '''))
     
     match (read_table_choice):
@@ -35,12 +36,24 @@ def read_alunos():
             nome_aluno2 = input('\nQual o nome do aluno que procuras?')
             idade_aluno = input('\nQual a idade aluno que procuras?')
 
-            cur.execute(f'SELECT nome_professor FROM professores WHERE nome_professor = {nome_aluno2} AND idade = {idade_aluno} ')
+            cur.execute(f'SELECT nome_aluno FROM alunos WHERE nome_aluno = {nome_aluno2} AND idade_aluno = {idade_aluno} ')
 
             resultados = cur.fetchall()
 
             for aluno in resultados:
                 print(aluno)
+
         case 4:
-            conn.close()
+
+            id_aluno1 = input('\nQual o id do aluno que procura?')
+
+            cur.execute(f'SELECT id FROM alunos WHERE id = {id_aluno1}')
+
+            resultados = cur.fetchall()
+
+            for aluno in resultados:
+                print(aluno)
+
+        case 5:
+            ""
     

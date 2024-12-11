@@ -18,22 +18,17 @@ def delete_alunos():
 
             cur.execute('DELETE * FROM alunos')
 
-            conn.commit()
-
         case 2:
 
             nome_aluno1 = input('\nQual o nome do aluno que desejas apagar?')
 
             cur.execute(f'Delete nome_aluno FROM alunos WHERE nome_aluno = {nome_aluno1}')
 
-            conn.commit()
         case 3:
 
             id_aluno1 = input('\nQual o id do aluno que desejas apagar?')
 
             cur.execute(f'DELETE nome_aluno FROM alunos WHERE nome_aluno = {nome_aluno2} AND idade_aluno = {idade_aluno} ')
-
-            conn.commit()
 
         case 4:
 
@@ -42,9 +37,9 @@ def delete_alunos():
 
             cur.execute(f'DELETE nome_aluno FROM alunos WHERE nome_aluno = {nome_aluno2} AND idade_aluno = {idade_aluno} ')
 
-            conn.commit()
-            
         case 5:
-            conn.close()
+            ""
         case _:
             print("Escolha inválida")
+
+conn.commit()

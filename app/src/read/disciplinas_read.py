@@ -29,5 +29,5 @@ def read_disciplinas():
             for disciplinas in resultados:
                 print(disciplinas)
         case 3:
-            conn.close()
+            ""
     

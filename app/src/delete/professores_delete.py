@@ -17,21 +17,21 @@ def delete_professores():
 
             cur.execute('DELETE * FROM professores')
 
-            conn.commit()
         case 2:
 
             nome_professor1 = input('\nQual o nome do professor que desejas apagar?')
 
             cur.execute(f'DELETE nome_professor FROM professores WHERE nome_professor = {nome_professor1}')
-
-            conn.commit()
+            
         case 3:
             id_professor = input('\nQual o id do professor que pretendes apagar?')
 
             cur.execute(f'DELETE id FROM professores WHERE id = {id_professor}')
 
-            conn.commit()
         case 4:
-            conn.close()
+            ""
         case _:
             print("Escolha inválida")
+
+conn.commit()
+conn.close()

@@ -39,5 +39,5 @@ def read_professores():
             for professor in resultados:
                 print(professor)
         case 4:
-            conn.close()
+            ""
     
