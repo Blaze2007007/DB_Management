@@ -3,12 +3,14 @@ import sqlite3
 conn = sqlite3.connect("C:\\Users\\Jorge Silva\\OneDrive\\Documentos\\epbjc\\sqlite-database\\gpsi.db")
 cur = conn.cursor()
 
-def update_alunos():
+def update_disciplinas():
 
-    escolha_id = int(input("Qual a disciplina que desejas atualizar?"))
+    escolha_id = int(input("Qual o id da disciplina que desejas atualizar?"))
 
-    escolha_nome = input("Qual a disciplina com a qual queres trocar?")
-    escolha_idade = int(input("Qual a idade com o qual queres trocar?"))
+    escolha_disciplina = input("Qual a disciplina com a qual queres trocar?")
 
-    cur.execute(f'UPDATE alunos SET nome_aluno = {escolha_nome} AND WHERE id = {escolha_id}')
-    cur.execute(f'UPDATE alunos SET idade_aluno = {escolha_idade} AND WHERE id = {escolha_id}')
+    cur.execute(f'UPDATE disciplinas SET disciplina = "{escolha_disciplina}" WHERE id = {escolha_id}')
+
+    conn.commit()
+
+    conn.close()

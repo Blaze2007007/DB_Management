@@ -10,7 +10,7 @@ def update_alunos():
     escolha_nome = input("Qual o nome com o qual queres trocar?")
     escolha_idade = int(input("Qual a idade com o qual queres trocar?"))
 
-    cur.execute(f'UPDATE alunos SET nome_aluno = {escolha_nome} WHERE id = {escolha_id}')
+    cur.execute(f'UPDATE alunos SET nome_aluno = "{escolha_nome}" WHERE id = {escolha_id}')
     cur.execute(f'UPDATE alunos SET idade_aluno = {escolha_idade} WHERE id = {escolha_id}')
     
     conn.commit()

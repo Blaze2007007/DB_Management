@@ -23,9 +23,9 @@ from src.drop.alunos_drop import drop_alunos                 #
 from src.drop.disciplinas_drop import drop_disciplinas       #
 from src.drop.professores_drop import drop_professores       #
 #------------------------------------------------------------#
-from src.insert.alunos_insert import insert_alunos           #
-from src.insert.disciplinas_insert import insert_disciplinas #
-from src.insert.professores_insert import insert_professores #
+from src.update.alunos_update import update_alunos           #
+from src.update.disciplinas_update import update_disciplinas #
+from src.update.professores_update import update_professores #
 #------------------------------------------------------------#
 
 conn = sqlite3.connect("C:\\Users\\Jorge Silva\\OneDrive\\Documentos\\epbjc\\sqlite-database\\gpsi.db")
@@ -45,7 +45,8 @@ match (escolha_da_tabela):
                          3-Ler tabela
                          4-Apagar dados da tabela
                          5-Apagar tabela
-                         6-Voltar 
+                         6-Atualizar tabela
+                         7-Voltar
                        '''))
             match(opcaocrd):
                     case 1:
@@ -59,6 +60,8 @@ match (escolha_da_tabela):
                     case 5:
                         drop_alunos()
                     case 6:
+                        update_alunos()
+                    case 7:
                         ""
                     case _:
                         print("Escolha inválida")
@@ -70,7 +73,8 @@ match (escolha_da_tabela):
                          3-Ler tabela
                          4-Apagar dados da tabela
                          5-Apagar tabela
-                         6-Voltar  
+                         6-Atualizar tabela
+                         7-Voltar  
                        '''))
             
             match(opcaocrd):
@@ -85,6 +89,8 @@ match (escolha_da_tabela):
                     case 5:
                         drop_disciplinas()
                     case 6:
+                        update_disciplinas()
+                    case 7:
                         ""
                     case _:
                         print("Escolha inválida")
@@ -95,7 +101,8 @@ match (escolha_da_tabela):
                          3-Ler tabela
                          4-Apagar dados da tabela
                          5-Apagar tabela
-                         6-Voltar 
+                         6-Atualizar tabela
+                         7-Voltar 
                        '''))
             
             match(opcaocrd):
@@ -110,6 +117,8 @@ match (escolha_da_tabela):
                     case 5:
                         drop_professores()
                     case 6:
+                        update_professores()
+                    case 7:
                         ""
                     case _:
                         print("Escolha inválida")
